@@ -1,6 +1,10 @@
 import './MainHeader.scss'
 
-const MainHeader = () => {
+interface IPropsMainHeader {
+  title: string | undefined
+}
+
+const MainHeader = ({ title }: IPropsMainHeader) => {
   return (
     <header className="header">
       <nav className="nav">
@@ -8,7 +12,7 @@ const MainHeader = () => {
           <button className="btn-back">Go Back</button>
         </div>
         <div className="title-wrapper">
-          <span className="title">Title</span>
+          <span className="title">{title}</span>
         </div>
       </nav>
     </header>

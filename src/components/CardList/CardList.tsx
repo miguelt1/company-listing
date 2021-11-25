@@ -1,17 +1,23 @@
 import Card from '../Card/Card'
-import { COMPANY_ICON } from '../../constants'
+import { VATIN_ICON } from '../../constants'
+import { ICompany } from '../../store/companies/types'
 import './CardList.scss'
+import { Link } from 'react-router-dom'
 
-const CardList = () => {
+interface IPropsCardList {
+  list: ICompany[]
+}
+
+const CardList = ({ list }: IPropsCardList) => {
   return (
     <div className="cards-wrapper">
-      <Card title="example" iconType={COMPANY_ICON} iconDescription="Some text here" />
-      <Card title="example" iconType={COMPANY_ICON} iconDescription="Some text here" />
-      <Card title="example" iconType={COMPANY_ICON} iconDescription="Some text here" />
-      <Card title="example" iconType={COMPANY_ICON} iconDescription="Some text here" />
-      <Card title="example" iconType={COMPANY_ICON} iconDescription="Some text here" />
-      <Card title="example" iconType={COMPANY_ICON} iconDescription="Some text here" />
-      <Card title="example" iconType={COMPANY_ICON} iconDescription="Some text here" />
+      {list.map((elem, index) => {
+        return (
+          <Link to={`/company/${elem.id}`} key={index}>
+            <Card title={elem.name} iconType={VATIN_ICON} iconDescription={elem.vatin} />
+          </Link>
+        )
+      })}
     </div>
   )
 }

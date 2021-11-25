@@ -1,26 +1,37 @@
-import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom'
+import * as asyncactions from '../store/companies/async-actions'
+import { Dispatch } from 'redux'
+import { connect } from 'react-redux'
+import { CompaniesActions } from '../store/companies/types'
+import { IRootState } from '../store'
+import { useEffect } from 'react'
+import Card from '../components/Card/Card'
+import { TYPE_ICON } from '../constants'
 
-// Please note:
-// <Link to="/products/p1" ... could also be written as
-// <Link to="p1" ... with React Router v6
+const mapStateToProps = ({ companies }: IRootState) => {
+  const { phoneNumberSelected } = companies
+  return { phoneNumberSelected }
+}
 
-const Number = () => {
-  return (
-    <section>
-      <h1>The Products Page</h1>
-      <ul>
-        <li>
-          <Link to='/products/p1'>A Book</Link>
-        </li>
-        <li>
-          <Link to='/products/p2'>A Carpet</Link>
-        </li>
-        <li>
-          <Link to='/products/p3'>An Online Course</Link>
-        </li>
-      </ul>
-    </section>
-  );
-};
+const mapDispatcherToProps = (dispatch: Dispatch<CompaniesActions>) => {
+  return {
+    getInfoNumber: (phoneId: string | undefined) =>
+      asyncactions.getPhoneNumberAsync(dispatch, phoneId),
+  }
+}
 
-export default Number;
+type ReduxType = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatcherToProps>
+
+const Number = (props: ReduxType) => {
+  const { phoneNumberSelected, getInfoNumber } = props
+
+  const phoneId = useParams().numberId
+
+  useEffect(() => {
+    getInfoNumber(phoneId)
+  }, [])
+
+  return <Card title={phoneNumberSelected?.id} iconDescription={phoneNumberSelected?.type} iconType={TYPE_ICON} />
+}
+
+export default connect(mapStateToProps, mapDispatcherToProps)(Number)
