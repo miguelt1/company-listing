@@ -1,5 +1,5 @@
 export interface IProps_Card {
-  title: string
+  title?: string | undefined
   iconType?: string
   iconDescription?: string
 }
