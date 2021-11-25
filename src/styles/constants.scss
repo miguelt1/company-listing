@@ -1,11 +1,12 @@
 // Font
 $primary-font: "Open Sans";
 // For media queries
-$mobile-max-width: 899px;
-$desktop-min-width: 900px;
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1280px;
 // Primary & secondary color of the website
 $primary-color: #364860;
-$secondary-color: #bbb;
+$secondary-color: hsla(210, 100%, 6.7%, 0.1);
 $tertiary-color: #2c394c;
 // Primary & secondary color for the text in the site
 $text-primary-color: #001122;

@@ -1,0 +1,35 @@
+@import '../../styles/constants.scss';
+.card-wrapper {
+    max-width: 340px;
+    border: 1px solid $primary-color;
+    padding: 15px 25px;
+    cursor: pointer;
+    &:hover {
+        background-color: $secondary-color;
+    }
+    .main-title-wrapper {
+        margin-bottom: 5px;
+        .main-title {
+            font-size: 18px;
+            font-weight: bold;
+            opacity: 0.8;
+            color: $primary-color;
+        }
+    }
+    .icon-description {
+        display: flex;
+        align-items: center;
+        .icon {
+            width: 14px;
+            height: 14px;
+        }
+        .description {
+            margin-left: 8px;
+            .text {
+                font-size: 14px;
+                opacity: 0.8;
+                line-height: 24px;
+            }
+        }
+    }
+}

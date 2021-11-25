@@ -1,0 +1,13 @@
+@import '../../styles/constants.scss';
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+}
+
+@media (max-width: $mobile) {
+    .cards-wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
