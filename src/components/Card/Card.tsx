@@ -1,12 +1,18 @@
 import './Card.scss'
-import { IProps_Card } from '../../interfaces/components'
+
 import { COMPANY_ICON, PHONE_ICON, TYPE_ICON, VATIN_ICON } from '../../constants'
 import companyIcon from '../../assets/icons/company.svg'
 import vatinIcon from '../../assets/icons/id.svg'
 import phoneIcon from '../../assets/icons/phone.svg'
 import typeIcon from '../../assets/icons/type.svg'
 
-const Card = ({ title, iconType, iconDescription }: IProps_Card) => {
+export interface IPropsCard {
+  title?: string | undefined
+  iconType?: string
+  iconDescription?: string
+}
+
+const Card = ({ title, iconType, iconDescription }: IPropsCard) => {
   return (
     <div className="card-wrapper">
       <div className="main-title-wrapper">

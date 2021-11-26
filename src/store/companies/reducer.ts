@@ -10,10 +10,6 @@ export function companiesReducer(
   action: CompaniesActions
 ): ICompaniesState {
   switch (action.type) {
-    case Constants.GET_LIST_COMPANIES:
-      return {
-        ...state,
-      }
     case Constants.ADD_LIST_COMPANIES:
       return {
         ...state,
@@ -29,11 +25,7 @@ export function companiesReducer(
         ...state,
         phoneNumberSelected: action.payload.item,
       }
-    case Constants.SET_PAGE_TITLE:
-      return {
-        ...state,
-        pageTitle: action.payload.title,
-      }
+
     default:
       return state
   }

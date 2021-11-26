@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom'
-import CardList from '../components/CardList/CardList'
+import Title from '../components/Title/Title'
 import * as asyncactions from '../store/companies/async-actions'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
-import { CompaniesActions, ICompany } from '../store/companies/types'
+import { CompaniesActions } from '../store/companies/types'
 import { IRootState } from '../store'
 import { useEffect } from 'react'
 import Table from '../components/Table/Table'
@@ -23,8 +23,6 @@ const mapDispatcherToProps = (dispatch: Dispatch<CompaniesActions>) => {
 type ReduxType = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatcherToProps>
 
 const CompanyDetail = (props: ReduxType) => {
-  // fetch companies list from store/api
-
   const { getCompanyDetail, companyDetail } = props
 
   const companyId = useParams().companyId
@@ -33,7 +31,12 @@ const CompanyDetail = (props: ReduxType) => {
     getCompanyDetail(companyId)
   }, [])
 
-  return <Table list={companyDetail?.phoneNumbers} />
+  return (
+    <>
+      <Title text={companyDetail?.name} />
+      <Table list={companyDetail?.phoneNumbers} />
+    </>
+  )
 }
 
 export default connect(mapStateToProps, mapDispatcherToProps)(CompanyDetail)
