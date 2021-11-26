@@ -40,6 +40,7 @@ Following is the tech stack:
 - **Redux** - Used to maintain the state of the app
 - **TypeScript** - TypeScript is a language that aims at easing development of large scale applications written in JavaScript
 - **SASS** - Using SASS files instead of plain CSS
+- **ESLint** - Used to lint the JS code
 
 
 ## 'src' Directory
@@ -53,6 +54,15 @@ Following is the tech stack:
 - **services** - Create a instance of API
 - **utilities** - Contains helper and utility functions for the application
 
+**ESLint**
+
+The project is enabled with ESLint and a production version of application can be made only if all the files pass the ESLint test.
+
+The reason for choosing ESLint is, it enforces a common rule across the team. Developers working on this project will be forced to have uniform code styling. This helps in maintaining the project in long run.
+
+ - ESLint configurations are maintained in the .eslintrc file in the root directory
+ - The project uses babel as its parser for JS files and ES6 is enforced for all JS files
+ - The project extends the ESLint rules from [**AirBnB**](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb). AirBnB is a famous and widely used standard across front-end projects.
 
 ## Responsiveness
 
