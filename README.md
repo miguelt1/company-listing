@@ -66,6 +66,5 @@ The repo uses SASS instead of plain CSS. SASS is easy to maintain and comes with
 - Eric Meyer's reset sass file is used for resetting
 - Constants for the application like theme colour, text colour are stored in **src/styles/\_constants.scss**
 - Styles for UI components are added in the src/components
-- Styles for the containers are added in src/containers.
 
 
