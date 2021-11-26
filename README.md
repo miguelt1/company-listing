@@ -28,7 +28,7 @@ In both `/number/:numberId` and `/companies/:companyId` there is a `Go Back` but
 
 `npm start`
 
-4. To build the project for production, run
+6. To build the project for production, run
 
 `npm run build`
 
