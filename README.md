@@ -51,17 +51,17 @@ In both `/number/:numberId` and `/companies/:companyId` there is a `Go Back` but
 
 ```
 
-3. To start the json-server, run
+4. To start the json-server, run
 
 `npm run api`
 
-4.  Create a .env with the same key as .env.example, set with the port you'll use to run the api
+5.  Create a .env with the same key as .env.example, set with the port you'll use to run the api
   
-5. To start the app, run
+6. To start the app, run
 
 `npm start`
 
-6. To build the project for production, run
+7. To build the project for production, run
 
 `npm run build`
 
