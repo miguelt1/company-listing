@@ -2,10 +2,13 @@
 
 This application shows the company list.
 
-in `/` the user see the company list
-in `/company/:companyId` the user should see a table of numbers that belong to that company
-in `/number/:numberId` the user should see the number details
-in both `/number/:numberId` and `/companies/:companyId` there should be a `Go Back` button that goes to the previous page
+In `/` the user see the company list
+
+In `/company/:companyId` the user should see a table of numbers that belong to that company
+
+In `/number/:numberId` the user should see the number details
+
+In both `/number/:numberId` and `/companies/:companyId` there should be a `Go Back` button that goes to the previous page
 
 ## Setup
 
