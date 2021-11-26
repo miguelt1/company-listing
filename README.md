@@ -18,12 +18,45 @@ In both `/number/:numberId` and `/companies/:companyId` there is a `Go Back` but
 
 `npm install`
 
+3. Create a db.json with the following format:
+```
+{
+    "companies": [
+        { "id": 1, "name": "Local Public Office", "vatin": "500754012" },
+        { "id": 2, "name": "Real Estate Franchising", "vatin": "500754042" },
+        { "id": 3, "name": "Car Wash", "vatin": "500754043" },
+        { "id": 4, "name": "Engineering Company", "vatin": "500754044" },
+        { "id": 5, "name": "Delivery Company", "vatin": "500754045" }
+    ],
+    "phone_numbers": [
+        { "id": "351910000000", "type": "mobile", "company_id": 1 },
+        { "id": "351910000001", "type": "mobile", "company_id": 2 },
+        { "id": "351910000002", "type": "mobile", "company_id": 1 },
+        { "id": "351910000003", "type": "mobile", "company_id": 2 },
+        { "id": "351910000004", "type": "mobile", "company_id": 2 },
+        { "id": "351910000005", "type": "mobile", "company_id": 5 },
+        { "id": "351910000006", "type": "mobile", "company_id": 5 },
+        { "id": "351910000007", "type": "mobile", "company_id": 2 },
+        { "id": "351210000001", "type": "landline", "company_id": 1 },
+        { "id": "351210000002", "type": "landline", "company_id": 1 },
+        { "id": "351210000003", "type": "landline", "company_id": 2 },
+        { "id": "351210000004", "type": "landline", "company_id": 2 },
+        { "id": "351210000005", "type": "landline", "company_id": 1 },
+        { "id": "351210000006", "type": "landline", "company_id": 1 },
+        { "id": "351210000007", "type": "landline", "company_id": 2 },
+        { "id": "351210000008", "type": "landline", "company_id": 4 },
+        { "id": "351210000009", "type": "landline", "company_id": 4 }
+    ]
+  }
+
+```
+
 3. To start the json-server, run
 
 `npm run api`
 
 4.  Create a .env with the same key as .env.example, set with the port you'll use to run the api
-
+  
 5. To start the app, run
 
 `npm start`
