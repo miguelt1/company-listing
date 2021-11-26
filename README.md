@@ -1,47 +1,68 @@
-# Getting Started with Create React App
+# Company Listing App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application shows the company list.
 
-## Available Scripts
+in `/` the user see the company list
+in `/company/:companyId` the user should see a table of numbers that belong to that company
+in `/number/:numberId` the user should see the number details
+in both `/number/:numberId` and `/companies/:companyId` there should be a `Go Back` button that goes to the previous page
 
-In the project directory, you can run:
+## Setup
 
-### `yarn start`
+1.  Clone this repo using the following command
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2.  Move to the repo that you have just cloned and run the following command
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`npm install`
 
-### `yarn test`
+3. To start the json-server, run
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm run api`
 
-### `yarn build`
+4.  Create a .env with the same key as .env.example, set with the port you'll use to run the api
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. To start the app, run
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. To build the project for production, run
 
-### `yarn eject`
+`npm run build`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Tech Stack
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Following is the tech stack:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **ReactJS** - The V in the MVC pattern
+- **Redux** - Used to maintain the state of the app
+- **TypeScript** - TypeScript is a language that aims at easing development of large scale applications written in JavaScript
+- **SASS** - Using SASS files instead of plain CSS
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## 'src' Directory
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **assets** - where assets are e.g icons
+- **components** - Dumb or stateless React Components
+- **constants** - File with constants
+- **pages** - Stateful React Components. These components gets connected to the redux store
+- **store** - Contains react reducer and actions files and main store
+- **styles** - Generic Styles for the application
+- **services** - Create a instance of API
+- **utilities** - Contains helper and utility functions for the application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-# company-listing
+
+## Responsiveness
+
+The application is responsive. It does not uses any third-party libraries like bootstrap for making it responsive.
+
+
+## CSS
+
+The repo uses SASS instead of plain CSS. SASS is easy to maintain and comes with lot of options for developers.
+
+- Eric Meyer's reset sass file is used for resetting
+- Constants for the application like theme colour, text colour are stored in **src/styles/\_constants.scss**
+- Styles for UI components are added in the src/components
+- Styles for the containers are added in src/containers.
+
+
