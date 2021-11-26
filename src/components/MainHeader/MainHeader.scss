@@ -1,38 +1,38 @@
 @import '../../styles/constants.scss';
 .header {
-    padding-left: 30px;
-    padding-bottom: 21px;
-    border-bottom: 1px solid $primary-color;
-    .nav {
-        display: flex;
-        flex-direction: column;
-        .btn-wrapper {
-            margin-top: 30px;
-            margin-bottom: 28px;
-            .btn-back {
-                color: $text-primary-color;
-                background: $secondary-color;
-                padding: 1em;
-                border: 1px solid $primary-color;
-                font-size: 1em;
-                cursor: pointer;
-                border-radius: 30px;
-                border: none;
-                &:active,
-                &:focus {
-                    border: none;
-                    background: $secondary-color;
-                    outline: none;
-                }
-            }
+  padding-left: 30px;
+  padding-bottom: 21px;
+  border-bottom: 1px solid $primary-color;
+  .nav {
+    display: flex;
+    flex-direction: column;
+    .btn-wrapper {
+      margin-top: 30px;
+      margin-bottom: 28px;
+      .btn-back {
+        color: $text-primary-color;
+        background: $secondary-color;
+        padding: 1em;
+        border: 1px solid $primary-color;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 30px;
+        border: none;
+        &:active,
+        &:focus {
+          border: none;
+          background: $secondary-color;
+          outline: none;
         }
-        .title-wrapper {
-            .title {
-                opacity: 0.8;
-                color: $text-primary-color;
-                font-size: 22px;
-                line-height: 28px;
-            }
-        }
+      }
     }
+    .title-wrapper {
+      .title {
+        opacity: 0.8;
+        color: $text-primary-color;
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+  }
 }
