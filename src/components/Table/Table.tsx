@@ -1,4 +1,5 @@
-import { ICompany, IPhoneNumber } from '../../store/companies/types'
+import { IPhoneNumber } from '../../store/companies/types'
+import { NUMBER, TYPE } from '../../constants'
 import './Table.scss'
 import { Link } from 'react-router-dom'
 
@@ -10,17 +11,17 @@ const Table = ({ list }: IPropsCardList) => {
   return (
     <table className="table-wrapper">
       <tr>
-        <th>Number</th>
-        <th>Type</th>
+        <th>{NUMBER}</th>
+        <th>{TYPE}</th>
       </tr>
       {list?.map((elem, index) => {
         return (
-         
-            <tr key={index}>
-              <td><Link to={`/number/${elem.id}`}>{elem.id}</Link></td>
-              <td>{elem.type}</td>
-            </tr>
-          
+          <tr key={index}>
+            <td>
+              <Link to={`/number/${elem.id}`}>{elem.id}</Link>
+            </td>
+            <td>{elem.type}</td>
+          </tr>
         )
       })}
     </table>

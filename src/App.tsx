@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './store'
@@ -12,7 +11,7 @@ function App() {
   return (
     <Provider store={store}>
       <div>
-        <MainHeader title="default" />
+        <MainHeader />
         <main>
           <Routes>
             <Route path="/" element={<CompanyList />} />

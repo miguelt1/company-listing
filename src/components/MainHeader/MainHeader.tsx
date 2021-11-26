@@ -1,18 +1,16 @@
 import './MainHeader.scss'
+import { GO_BACK } from '../../constants'
+import { useNavigate } from 'react-router-dom'
 
-interface IPropsMainHeader {
-  title: string | undefined
-}
-
-const MainHeader = ({ title }: IPropsMainHeader) => {
+const MainHeader = () => {
+  const navigate = useNavigate()
   return (
     <header className="header">
       <nav className="nav">
         <div className="btn-wrapper">
-          <button className="btn-back">Go Back</button>
-        </div>
-        <div className="title-wrapper">
-          <span className="title">{title}</span>
+          <button className="btn-back" onClick={() => navigate(-1)}>
+            {GO_BACK}
+          </button>
         </div>
       </nav>
     </header>

@@ -1,22 +1,25 @@
+@import '../../styles/constants.scss';
+
 .table-wrapper {
-    border-collapse: collapse;
-    width: 100%;
-    td,
-    th {
-        border: 1px solid #ddd;
-        padding: 8px;
-    }
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-    tr:hover {
-        background-color: #ddd;
-    }
-    th {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: left;
-        background-color: #04aa6d;
-        color: white;
-    }
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px  ;
+  td,
+  th {
+    border: 1px solid $grey-color;
+    padding: 8px;
+  }
+  tr:nth-child(even) {
+    background-color: $white-type1-color;
+  }
+  tr:hover {
+    background-color: $grey-color;
+  }
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: $green-color;
+    color: $white-type1-color;
+  }
 }
