@@ -58,8 +58,6 @@ export async function getPhoneNumberAsync(
     if (phoneId) {
       let getPhoneNumber = await api.get<IPhoneNumber>(`/phone_numbers/${phoneId}`)
 
-      console.log(getPhoneNumber.data)
-
       dispatch(actions.setPhoneNumber(getPhoneNumber.data))
     }
   } catch (err) {

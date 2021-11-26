@@ -31,7 +31,13 @@ const Number = (props: ReduxType) => {
     getInfoNumber(phoneId)
   }, [])
 
-  return <Card title={phoneNumberSelected?.id} iconDescription={phoneNumberSelected?.type} iconType={TYPE_ICON} />
+  return (
+    <Card
+      title={phoneNumberSelected?.id}
+      iconDescription={phoneNumberSelected?.type}
+      iconType={TYPE_ICON}
+    />
+  )
 }
 
 export default connect(mapStateToProps, mapDispatcherToProps)(Number)
